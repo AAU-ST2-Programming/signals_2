@@ -1,3 +1,4 @@
+# %load files/classify_s1s2_with_ecg.py
 #!/usr/bin/env python3
 """
 classify_s1s2_with_ecg.py
@@ -83,10 +84,10 @@ def bandpass(x, fs, low, high, order=3):
 
 def main():
     # use relative paths to the signals_2/files folder (run from repo root)
-    ecgpcg_path = 'signals_2/files/ECGPCG.csv'
-    peaks_path = 'signals_2/files/peaks_ECGPCG.csv'
-    out_path = 'signals_2/files/peaks_ECGPCG2.csv'
-    fig_path = 'signals_2/files/s1s2_classification.png'
+    ecgpcg_path = 'files/ECGPCG.csv'
+    peaks_path = 'files/peaks_ECGPCG.csv'
+    fig_path = 'files/s1s2_classification.png'
+    out_path = 'files/peaks_ECGPCG2.csv'
 
     # read ECG/PCG using numpy (timestamp, ECG, PCG)
     ts, ecg, pcg = np.loadtxt(ecgpcg_path, delimiter=',', skiprows=1, unpack=True)
@@ -95,8 +96,8 @@ def main():
     fs = 1.0 / dt
 
     # bandpass filter PCG, and compute envelope
-    pcg = bandpass(pcg, fs=fs, low=50, high=300)
-    pcg_env = envelope(pcg, window=301)
+    pcg = bandpass(pcg, fs=fs, low=20, high=300)
+    pcg_env = envelope(pcg, window=101)
     
     # load peaks using numpy: classification (str), timestamp (float), amplitude (float)
     cls_col, index_col, amp_col = np.loadtxt(peaks_path, delimiter=',', dtype=str, skiprows=1, unpack=True)
@@ -137,6 +138,11 @@ def main():
     s1_amps = [c.s1_amp for c in cardiac_cycles]
     s2_times = [c.S2 for c in cardiac_cycles]
     s2_amps = [c.s2_amp for c in cardiac_cycles]
+
+    r_to_s1 = [c.r_to_s1() for c in cardiac_cycles if not np.isnan(c.s1_idx)]
+    r_to_s2 = [c.r_to_s2() for c in cardiac_cycles if not np.isnan(c.s2_idx)]
+    s1_to_s2 = [c.s1_to_s2() for c in cardiac_cycles if not np.isnan(c.s1_idx) and not np.isnan(c.s2_idx)]
+
     # Plot results
     _,axs = plt.subplots(3,1,figsize=(12, 8))
     axs[0].plot(ts, ecg, label='ECG', color='k')
@@ -163,11 +169,11 @@ def main():
     axs[1].legend()
 
 
-    axs[2].hist([c.r_to_s1() for c in cardiac_cycles if not np.isnan(c.s1_idx)], bins=7, alpha=0.7, label='R to S1', color='b')
-    axs[2].hist([c.r_to_s2() for c in cardiac_cycles if not np.isnan(c.s2_idx)], bins=7, alpha=0.7, label='R to S2', color='r')
-    axs[2].hist([c.s1_to_s2() for c in cardiac_cycles if not np.isnan(c.s1_idx) and not np.isnan(c.s2_idx)], bins=7, alpha=0.7, label='S1 to S2', color='g')
-    axs[2].set_title('Histogram of R to S1 and S2 Intervals')
-    axs[2].set_xlabel('$\Delta$ Time (s) from R peak', )
+    axs[2].hist(r_to_s1, bins=7, alpha=0.7, label='R to S1', color='b')
+    axs[2].hist(r_to_s2, bins=7, alpha=0.7, label='R to S2', color='r')
+    axs[2].hist(s1_to_s2, bins=7, alpha=0.7, label='S1 to S2', color='g')
+    axs[2].set_title('Histogram of R to S1 and S2 Intervals') 
+    axs[2].set_xlabel(r'$\Delta$ Time (s) from R peak')
     axs[2].set_ylabel('Count')
     axs[2].legend() 
     plt.tight_layout()
