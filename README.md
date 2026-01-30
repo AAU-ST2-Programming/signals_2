@@ -1,42 +1,75 @@
-# {{REPO_NAME}}
+# Signal 2: Frekvensanalyse og FFT
 
-- **PowerPoint slideshow**: `{{REPO_NAME}}.pptx`
-- **questions.docx** – `Indeholder spørgsmål som i får i forbindelsen med forlæsningen.`
-- **Lecture specific files** - `En mappe som indeholder filer i skal bruge i forbindelse med forlæsningen.`
+- **Lecture specific files**: files/* – `En mappe med filer til øvelser og eksempler fra undervisningen.`
+
 ---
 
-## ​ Usage
+## Forberedelse til lektionen
 
-To use this template:
+Følg denne guide nøje for at være klar til undervisningen:
 
-1. Click **Use this template** on GitHub to create a new repo.
-2. Clone it locally:
-   ```bash
-   git clone https://github.com/you/{{REPO_NAME}}.git
-   cd {{REPO_NAME}}
+### 1. Literatur
 
-## Forberedelse
+**Primær litteratur:**
+- [Think Python, 2nd Edition af Allen B. Downey (online bog)](https://allendowney.github.io/ThinkPython/)
+  - Kapitel 10: Lists (repetition)
+- [Python for Everybody af Charles Severance (PDF)](https://do1.dr-chuck.com/pythonlearn/EN_us/pythonlearn.pdf)
+  - Kapitel 8: Arbejde med arrays
+- [Data Wrangling with Python af Jacek Gołębiewski (PDF)](https://datawranglingpy.gagolewski.com/datawranglingpy.pdf)
+  - Kapitel 7: Frekvensanalyse
+  - Kapitel 8: Fourier-transformationer og spektral analyse
 
-Til hver lektion skal man forvente følgende:
+**Supplerende litteratur:**
+- [SciPy Signal Processing Documentation](https://docs.scipy.org/doc/scipy/reference/signal.html)
+- [NumPy FFT Documentation](https://numpy.org/doc/stable/reference/routines.fft.html)
 
-Før/efter Kursusgang:
-- Gennemgang af tidligere kursusgange
-  - Vi bygger altid ovenpå tidligere kursusgange
-- Gennemgå nyt materiale, som vil være beskrevet i denne readme
+**Formål:** Forstå Fourier-transformationer, FFT og frekvensanalyse af signaler.
 
-Tiden er sat således at der vil være:
+---
 
-- 4 timers forberedelser (der hjemme, før undervisning)
-- 4 timers undervisning og samlet opgave regning
-- 4 timers individuel opgaveregning (der hjemme, efter undervisning)
+### 2. Installationer og opsætning
+- Sørg for at Python og VS Code er installeret (se evt. tidligere guides).
+- Tjek at du har følgende extensions i Visual Studio Code:
+  - `Python`
+  - `jupyter`
+- Download eller opdater materialet:
+  ```bash
+  cd ~/ST2-AnvendtProgrammering/signal_2
+  git pull
+  ```
 
-## Spørgsmål noter
+---
+
+## Lektionens fokus
+
+- Fourier-transformationer og FFT
+- Frekvensspectra og spektral analyse
+- Filterdesign og filtrering
+- Praktiske eksempler med EKG- og ECG-data
+
+---
+
+## Forventninger til forberedelse og undervisning
+
+- **Før/efter kursusgang:**
+  - Gennemgå tidligere kursusgange og kodeeksempler
+  - Læs nyt materiale som beskrevet ovenfor
+- **Tidsforbrug:**
+  - 4 timers forberedelse (hjemme, før undervisning)
+  - 4 timers undervisning og gruppeopgaver
+  - 4 timers individuel opgaveregning (hjemme, efter undervisning)
+
+---
+
+## Spørgsmål og opgaver
 
 - Til hver opgave i undervisningen vil der være:
-  - En opgave beskrivelse,
-  - En guide til hvordan man udfører opgaven.
+  - En opgavebeskrivelse
+  - En guide til hvordan opgaven løses
   - Svar på opgaven
-- Spørgsmålene i opgaveregningen bliver generelt set mere komplicerede, 
-  - De sidste opgaver er en blanding af både den nuværende kursusgang, samt tidligere kursusgange.
-- Til eksamen vil der kun være en opgave beskrivelse.
-  - Det vil altså være op til jer at kunne se hvordan en opgave skal løses ud fra opgave beskrivelsen.
+- Opgaverne bygger videre på hinanden og bliver gradvist sværere.
+- Til eksamen vil der kun være en opgavebeskrivelse – du skal selv kunne vurdere, hvordan opgaven løses.
+
+---
+
+**Husk:** Brug "Data Wrangling with Python" kapitel 7-8 som din primære kilde!
