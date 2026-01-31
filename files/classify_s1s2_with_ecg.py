@@ -90,7 +90,7 @@ def main():
     out_path = 'files/peaks_ECGPCG2.csv'
 
     # read ECG/PCG using numpy (timestamp, ECG, PCG)
-    ts, ecg, pcg = np.loadtxt(ecgpcg_path, delimiter=',', skiprows=1, unpack=True)
+    ts, ecg, pcg = np.genfromtxt(ecgpcg_path, delimiter=',', skip_header=1, unpack=True)
     # sampling frequency (robust median diff)
     dt = np.median(np.diff(ts))
     fs = 1.0 / dt
@@ -100,7 +100,7 @@ def main():
     pcg_env = envelope(pcg, window=101)
     
     # load peaks using numpy: classification (str), timestamp (float), amplitude (float)
-    cls_col, index_col, amp_col = np.loadtxt(peaks_path, delimiter=',', dtype=str, skiprows=1, unpack=True)
+    cls_col, index_col, amp_col = np.genfromtxt(peaks_path, delimiter=',', dtype=str, skip_header=1, unpack=True)
     index_col = index_col.astype(float)
     amp_col = amp_col.astype(float)
     S = 0
