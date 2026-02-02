@@ -11,14 +11,21 @@ Følg denne guide nøje for at være klar til undervisningen:
 ### 1. Literatur
 
 **Primær litteratur:**
-- [Think Python, 2nd Edition af Allen B. Downey (online bog)](https://allendowney.github.io/ThinkPython/)
-  - Kapitel 10: Lists (repetition)
+- [Think Python (online bog)](https://allendowney.github.io/ThinkPython/)
+  - Kapitel 9: Lists (repetition)
 - [Python for Everybody af Charles Severance (PDF)](https://do1.dr-chuck.com/pythonlearn/EN_us/pythonlearn.pdf)
   - Kapitel 8: Arbejde med arrays
 - [Data Wrangling with Python af Jacek Gołębiewski (PDF)](https://datawranglingpy.gagolewski.com/datawranglingpy.pdf)
-  - Kapitel 7: Frekvensanalyse
-  - Kapitel 8: Fourier-transformationer og spektral analyse
+  - Kapitel 4.3: Inspecting the data distribution with histograms
 
+- https://eur-lex.europa.eu/eli/reg/2016/679/oj  
+  - article. 5 (principper), 
+  - article 9 (særlige kategorier af personoplysninger),
+  - article. 28 (databehandler), 
+  - article. 32 (sikkerhed), 
+  - article. 35 (DPIA). 
+- https://www.retsinformation.dk/eli/lta/2018/502
+  - Dansk lov: Databeskyttelsesloven, bl.a. §10 om behandling til statistiske/videnskabelige undersøgelser.  
 **Supplerende litteratur:**
 - [SciPy Signal Processing Documentation](https://docs.scipy.org/doc/scipy/reference/signal.html)
 - [NumPy FFT Documentation](https://numpy.org/doc/stable/reference/routines.fft.html)
