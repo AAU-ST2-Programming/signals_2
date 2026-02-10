@@ -1,4 +1,4 @@
-# Signal 2: Frekvensanalyse og FFT
+# Filtrering og mekaniske signaler
 
 - **Lecture specific files**: files/* – `En mappe med filer til øvelser og eksempler fra undervisningen.`
 
@@ -40,10 +40,12 @@ Følg denne guide nøje for at være klar til undervisningen:
   - `Python`
   - `jupyter`
 - Download eller opdater materialet:
-  ```bash
-  cd ~/ST2-AnvendtProgrammering/signal_2
-  git pull
-  ```
+
+> ```zsh
+> git clone https://github.com/AAU-ST2-Programming/signals_2.git
+> cd signals_2
+> git pull
+> ```
 
 ---
 
