@@ -17,15 +17,12 @@ Følg denne guide nøje for at være klar til undervisningen:
   - Kapitel 8: Arbejde med arrays
 - [Data Wrangling with Python af Jacek Gołębiewski (PDF)](https://datawranglingpy.gagolewski.com/datawranglingpy.pdf)
   - Kapitel 4.3: Inspecting the data distribution with histograms
-
-- https://eur-lex.europa.eu/eli/reg/2016/679/oj  
+- [Databeskyttelsesloven (Retsinformation)](https://www.retsinformation.dk/eli/lta/2018/502)
   - article. 5 (principper), 
   - article 9 (særlige kategorier af personoplysninger),
   - article. 28 (databehandler), 
   - article. 32 (sikkerhed), 
   - article. 35 (DPIA). 
-- https://www.retsinformation.dk/eli/lta/2018/502
-  - Dansk lov: Databeskyttelsesloven, bl.a. §10 om behandling til statistiske/videnskabelige undersøgelser.  
 **Supplerende litteratur:**
 - [SciPy Signal Processing Documentation](https://docs.scipy.org/doc/scipy/reference/signal.html)
 - [NumPy FFT Documentation](https://numpy.org/doc/stable/reference/routines.fft.html)
