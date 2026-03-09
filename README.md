@@ -23,7 +23,6 @@ Følg denne guide nøje for at være klar til undervisningen:
 - [SciPy Signal Processing Documentation](https://docs.scipy.org/doc/scipy/reference/signal.html)
 - [NumPy FFT Documentation](https://numpy.org/doc/stable/reference/routines.fft.html)
 
-**Formål:** Forstå Fourier-transformationer, FFT og frekvensanalyse af signaler.
 
 ---
 
@@ -42,12 +41,12 @@ Følg denne guide nøje for at være klar til undervisningen:
 
 ---
 
-## Lektionens fokus
+# Mål for dagens forelæsning
 
-- Fourier-transformationer og FFT
-- Frekvensspectra og spektral analyse
-- Filterdesign og filtrering
-- Praktiske eksempler med EKG- og ECG-data
+- Forstå SCG/PCG signaler og deres frekvensindhold
+- Finde S1 og S2 lyde
+- Synkronisér events/features mellem ECG og SCG (R→S1,S2 timing)
+- Kvantificér variabilitet med histogrammer
 
 ---
 
@@ -73,5 +72,3 @@ Følg denne guide nøje for at være klar til undervisningen:
 - Til eksamen vil der kun være en opgavebeskrivelse – du skal selv kunne vurdere, hvordan opgaven løses.
 
 ---
-
-**Husk:** Brug "Data Wrangling with Python" kapitel 7-8 som din primære kilde!
