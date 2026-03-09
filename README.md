@@ -13,12 +13,12 @@ Følg denne guide nøje for at være klar til undervisningen:
 **Primær litteratur:**
 - [Data Wrangling with Python af Jacek Gołębiewski (PDF)](https://datawranglingpy.gagolewski.com/datawranglingpy.pdf)
   - Kapitel 4.3: Inspecting the data distribution with histograms
-- [Databeskyttelsesloven (Retsinformation)](https://www.retsinformation.dk/eli/lta/2018/502)
-  - article. 5 (principper), 
+- [https://eur-lex.europa.eu/eli/reg/2016/679/oj](https://eur-lex.europa.eu/eli/reg/2016/679/oj)
   - article 9 (særlige kategorier af personoplysninger),
   - article. 28 (databehandler), 
   - article. 32 (sikkerhed), 
   - article. 35 (DPIA). 
+
 **Supplerende litteratur:**
 - [SciPy Signal Processing Documentation](https://docs.scipy.org/doc/scipy/reference/signal.html)
 - [NumPy FFT Documentation](https://numpy.org/doc/stable/reference/routines.fft.html)
@@ -41,12 +41,9 @@ Følg denne guide nøje for at være klar til undervisningen:
 
 ---
 
-# Mål for dagens forelæsning
+# Formål
 
-- Forstå SCG/PCG signaler og deres frekvensindhold
-- Finde S1 og S2 lyde
-- Synkronisér events/features mellem ECG og SCG (R→S1,S2 timing)
-- Kvantificér variabilitet med histogrammer
+- Med udgangspunkt i et PCG signal: Forstå hvordan et filter kan benyttes i forbindelse med informations udtræk fra et signal.
 
 ---
 
